@@ -12,8 +12,6 @@ import random
 import re
 import sys
 
-
-
 # Square Class
 # Description: Object that represents a square
 # Invairants:
