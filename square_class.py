@@ -30,11 +30,10 @@ class Square(object):
     def __init__(self, side_length):
 
         try:
-            side_length = float(side_length)    
+            side_length = int(side_length)    
         except:
             side_length = 0
 
-        side_length = math.round(side_length)
         if side_length > 10 or side_length < 0:
             self.side_length = 0
         else: 
