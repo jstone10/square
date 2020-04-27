@@ -3,7 +3,7 @@
 # by:      Josh Stone
 # created: 4/24/20
 #
-# Simple square class 
+# Simple square class with perimeter and area methods 
 
 #!/bin/python3
 import math
@@ -54,14 +54,18 @@ class Square(object):
     def get_area(self):
         return self.side_length ** 2
 
+
+# Unit tests for the square class
 class sq_tests(unittest.TestCase):
 
+    #tests non-number inputs
     def test_string(self):
         for i in range(100):
             s  = randomString(i)
             sq = Square(s)
             self.assertEqual(sq.side_length, 0)
 
+    #tests number inputs
     def test_random_float(self):
         random.seed()
 
@@ -74,6 +78,7 @@ class sq_tests(unittest.TestCase):
             else:
                 self.assertEqual(sq.side_length, int(sl))
 
+    #tests area_method
     def test_area(self):
         random.seed()
 
@@ -82,6 +87,7 @@ class sq_tests(unittest.TestCase):
             sq = Square(sl)
             self.assertEqual(sq.get_area(), int(sl) ** 2)
 
+    #tests perimeter method
     def test_perimeter(self):
         random.seed()
 
@@ -90,7 +96,7 @@ class sq_tests(unittest.TestCase):
             sq = Square(sl)
             self.assertEqual(sq.get_perimeter(), int(sl) * 4)
 
-
+# generates a random string of length stringLength 
 def randomString(stringLength):
     letters = string.ascii_lowercase
     return ''.join(random.choice(letters) for i in range(stringLength))

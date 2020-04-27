@@ -1,0 +1,10 @@
+Square
+
+This repo contains the script and module for the class Square. This class 
+represents a Square of with an integer side length from 0 to 10. It includes
+two methods, get_area() and get_perimeter() which return the area and peremiter
+of the square. By runnning the square_class.py script you can run the unit 
+tests for the square class. These leverage the random module to test a the 
+square class methods as well as its handeling of misinputs. 
+
+To import the square class use "from square_class import square"
